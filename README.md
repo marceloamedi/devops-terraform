@@ -6,9 +6,9 @@ Terraform-Eks
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 5.75.0 |
-| <a name="requirement_helm"></a> [helm](#requirement\_helm) | 2.16.1 |
-| <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) | 2.33.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 4.48.0 |
+| <a name="requirement_helm"></a> [helm](#requirement\_helm) | 2.8.0 |
+| <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) | 2.17.0 |
 
 ## Providers
 
@@ -31,8 +31,10 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_cidr_block"></a> [cidr\_block](#input\_cidr\_block) | Networking CIRD block to be used for the VPC | `string` | n/a | yes |
+| <a name="input_cidr_block"></a> [cidr\_block](#input\_cidr\_block) | Networking CIDR block to be used for the VPC | `string` | n/a | yes |
 | <a name="input_project_name"></a> [project\_name](#input\_project\_name) | Project name to be used to name the resources (Name tag) | `string` | n/a | yes |
+| <a name="input_region"></a> [region](#input\_region) | AWS region to create the resources | `string` | n/a | yes |
+| <a name="input_tags"></a> [tags](#input\_tags) | A map of tags to add to all AWS resources | `map(any)` | n/a | yes |
 
 ## Outputs
 

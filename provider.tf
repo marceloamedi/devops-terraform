@@ -2,26 +2,21 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "5.75.0"
+      version = "4.48.0"
     }
     kubernetes = {
       source  = "hashicorp/kubernetes"
-      version = "2.33.0"
+      version = "2.17.0"
     }
-
     helm = {
       source  = "hashicorp/helm"
-      version = "2.16.1"
+      version = "2.8.0"
     }
   }
-  backend "s3" {
-    bucket = "devops-buckets3"
-    key    = "tarraform.tfstate"
-    region = "us-east-1"
-  }
 }
+
 provider "aws" {
-  region = "us-east-1"
+  region = var.region
 }
 
 provider "kubernetes" {
