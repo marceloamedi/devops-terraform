@@ -1,5 +1,5 @@
 resource "aws_eip" "eks_ngw_eip_1a" {
-  domain = "vpc"
+  vpc = true
   tags = merge(
     var.tags,
     {
@@ -9,7 +9,7 @@ resource "aws_eip" "eks_ngw_eip_1a" {
 }
 
 resource "aws_eip" "eks_ngw_eip_1b" {
-  domain = "vpc"
+  vpc = true
   tags = merge(
     var.tags,
     {
@@ -25,7 +25,7 @@ resource "aws_nat_gateway" "eks_ngw_1a" {
   tags = merge(
     var.tags,
     {
-      Name = "${var.project_name}-nwg-1a"
+      Name = "${var.project_name}-ngw-1a"
     }
   )
 }
@@ -37,7 +37,7 @@ resource "aws_nat_gateway" "eks_ngw_1b" {
   tags = merge(
     var.tags,
     {
-      Name = "${var.project_name}-nwg-1b"
+      Name = "${var.project_name}-ngw-1b"
     }
   )
 }
